@@ -1,0 +1,49 @@
+.sidebar {
+    top: 72.5%;
+    background: #fff;
+    border: 1px solid #EBEBEB;
+    width: 80px;
+    position: fixed;
+    right: 10px;
+    margin-top: -105px;
+    z-index: 9999;
+     .item {
+        height: 60px;
+        border-bottom: 1px solid #EBEBEB;
+        text-align: center;
+        padding-top: 10px;
+        color: #111;
+        font-size: 12px;
+        position: relative;
+        cursor: pointer;
+        box-sizing: content-box;
+        a {
+            display: block;
+            text-decoration: none;
+            color: #111;
+        }
+        .icon {
+            background: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png) no-repeat;
+            margin: 0 auto;
+            width: 32px;
+            height: 29px;
+            background-size: 100%;
+        }
+        .service {
+            background-position: 3px -30px;
+        }
+        .gotop {
+            background-position: 4px -65px;
+        }
+    }
+}
+.sidebar .item:last-child {
+    border-bottom-width: 0;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}

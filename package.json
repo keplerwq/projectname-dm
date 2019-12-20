@@ -1,0 +1,22 @@
+{
+  "name": "projectname-dm",
+  "version": "1.0.0",
+  "description": "这是一个仓库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keplerwq/projectname-dm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keplerwq/projectname-dm/issues"
+  },
+  "homepage": "https://github.com/keplerwq/projectname-dm#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

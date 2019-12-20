@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width:600px;margin:0 auto;">
+    <legend>用户注册</legend>
+    <form action="http://127.0.0.1/projectname-dm/php/tel.php" method="post">
+    <p><label for="">手机号：</label><input type="text" name="tel"><span></span></p>
+    <p><label for="">输入密码：</label><input type="password" name="password"><span></span></p>
+    <p><label for="">确认密码：</label><input type="password" name="password"><span></span></p>
+    <P><input type="submit" value="注册" name="submit"></P> 
+    </form>
+    </fieldset>
+    <!--1.表单验证
+        2.手机号码是否已经注册-->
+    <script>
+    let inputs=document.querySelectorAll('input');
+    const aSpan=document.querySelectorAll('span');
+    //前端将手机号通过ajax传给后端，后端获取手机号和数据库里面的手机号进行比较，返回比较的结果。
+    inputs[0].onfocus=function(){
+            this.value = '';
+        };
+
+    inputs[0].onblur = function() {
+                var regtel = /^1[3578]\d{9}$/;
+                if (this.value !== '') {
+                    if (regtel.test(this.value)) {
+                        aSpan[0].innerHTML = '√';
+                        aSpan[0].style.color = 'green';
+                        telflag = true;
+                    } else {
+                        aSpan[0].innerHTML = '手机号码输入错误';
+                        aSpan[0].style.color = 'red';
+                        telflag = false;
+                    }
+                } else {
+                    aSpan[0].innerHTML = '手机号码不能为空';
+                    aSpan[0].style.color = 'red';
+                    telflag = false;
+                }
+            
+        let ajax=new XMLHttpRequest();
+        ajax.open('post','http://127.0.0.1/projectname-dm/php/tel.php',true);
+        ajax.setRequestHeader('content-type','application/x-www-form-urlencoded');
+        ajax.send('tel='+inputs[0].value);
+        ajax.onreadystatechange=function(){
+            if(ajax.readyState==4){
+                if(ajax.status===200){
+                    if(!ajax.responseText){
+                        aSpan[0].innerHTML='√';
+                    }else{
+                        aSpan[0].innerHTML='该手机号已经注册';
+                        aSpan[0].style.color='red';
+                    }
+
+                }else{
+                    throw new Error('接口地址有误');
+                }
+            }
+        }
+
+    }
+    
+    
+    </script>
+    
+</body>
+</html>

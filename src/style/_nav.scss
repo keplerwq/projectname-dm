@@ -1,0 +1,80 @@
+#slides {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav  {
+    margin-top: 15px!important;
+    padding: 22px 0 25px 0;
+    border: 1px solid #EBEBEB;
+    zoom: 1;
+    .nav__list {
+        float: left;
+        display: block;
+        width: 120px;
+        text-align: center;
+        .nav__icon {
+            display: block;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto;
+            background: url(https://img.alicdn.com/tfs/TB1U9R8GY9YBuNjy0FgXXcxcXXa-146-1822.png) no-repeat;
+            background-size: 100% auto;
+        }
+        .nav__icon__ych {
+            background-position: 0 0;
+        }
+        .nav__icon__gjhj {
+            background-position: 0 -64px;
+        }
+        .nav__icon__tyjj {
+            background-position: 0 -120px;
+        }
+        .nav__icon__qz {
+            background-position: 0 -180px;
+        }
+        .nav__icon__zlxx{
+            background-position: 0 -240px;
+        }
+        .nav__icon__yyh {
+            background-position: 0 -297px;
+        }
+        .nav__icon__xsxq {
+            background-position: 0 -360px;
+        }
+        .nav__icon__wdbl {
+            background-position: 0 -420px;
+        }
+        .nav__icon__dm {
+            background-position: 0 -480px;
+        }
+        .nav__icon__lyzl {
+            background-position: 0 -540px;
+        }
+        .nav__info {
+            font-size: 16px;
+            color: #111;
+            text-align: center;
+        }
+        .nav__info:hover {
+            color: #ff1268;
+        }
+
+    }
+}
+
+.nav:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: '.';
+}
+
+
+
